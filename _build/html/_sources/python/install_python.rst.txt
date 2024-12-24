@@ -7,8 +7,7 @@ Follow this guide to install Python step by step on your system.
 
 1. Download Python
 ------------------
-   - Visit the official Python website: https://www.python.org/.
-   - Navigate to the `Downloads` section.
+   - Visit the official Python website and navigate to the `Downloads section <https://www.python.org/downloads/>`_.
    - Choose the appropriate version for your operating system (e.g., macOS, Windows, or Linux).
    - Click the download link to get the installer.
 
