@@ -1,0 +1,9 @@
+Page 3
+======
+
+.. toctree::
+   :maxdepth: 1
+
+   page3_sub1
+   page3_sub2
+   page3_sub3

@@ -1,0 +1,9 @@
+Install Python and PIP
+======
+
+.. toctree::
+   :maxdepth: 1
+
+   page1_sub1
+   page1_sub2
+   page1_sub3

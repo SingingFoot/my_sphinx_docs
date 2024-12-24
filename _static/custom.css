@@ -1,0 +1,9 @@
+/* Adjust the logo size in the sidebar */
+.wy-side-nav-search img {
+    max-width: 60px; /* Adjust this value to your preferred width */
+    max-height: 60px; /* Adjust this value to your preferred height */
+    margin: 0 auto;
+    display: block;
+    border-radius: 1px; /* Optional: Add rounded corners */
+    background-color: transparent; /* Ensure background is clear */
+}

@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Installing and Configuring Sphinx" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="sphinx/install_sphinx.html" />
+<meta property="og:site_name" content="TechDocs" />
+<meta property="og:description" content="Follow this guide to install and configure Sphinx step by step on your system. 1. Verify pip Installation: Before installing Sphinx, ensure that pip is installed and up to date. Run the following c..." />
+<meta name="description" content="Follow this guide to install and configure Sphinx step by step on your system. 1. Verify pip Installation: Before installing Sphinx, ensure that pip is installed and up to date. Run the following c..." />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing and Configuring Sphinx &mdash; TechDocs 23.12.24 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=16fffebd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5787e845"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Install Read the Docs Theme" href="install_readthedocs.html" />
+    <link rel="prev" title="Installing and Configuring pip" href="../python/install_pip.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/my_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Python and PIP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/install_python.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/install_pip.html">Installing and Configuring pip</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Sphinx and Read the Docs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing and Configuring Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#verify-pip-installation">1. Verify pip Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2. Install Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-a-sphinx-project">3. Set Up a Sphinx Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-additional-sphinx-extensions-optional">4. Install Additional Sphinx Extensions (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-your-documentation">5. Build Your Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preview-your-documentation">6. Preview Your Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customize-your-documentation">7. Customize Your Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rebuild-your-documentation-after-changes">8. Rebuild Your Documentation After Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-sphinx-issues">9. Troubleshooting Sphinx Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-sphinx-in-a-virtual-environment-optional">10. Install Sphinx in a Virtual Environment (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install_readthedocs.html">Install Read the Docs Theme</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Set Up Your Website</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../setup/customise_menu.html">Customise Menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/customise_colors.html">Customise Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/widgets.html">Widgets</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TechDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installing and Configuring Sphinx</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/sphinx/install_sphinx.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installing-and-configuring-sphinx">
+<span id="install-sphinx"></span><h1>Installing and Configuring Sphinx<a class="headerlink" href="#installing-and-configuring-sphinx" title="Link to this heading"></a></h1>
+<p>Follow this guide to install and configure Sphinx step by step on your system.</p>
+<section id="verify-pip-installation">
+<h2>1. Verify pip Installation<a class="headerlink" href="#verify-pip-installation" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Before installing Sphinx, ensure that <cite>pip</cite> is installed and up to date. Run the following command to check:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p>If <cite>pip</cite> is not installed, refer to the guide on installing pip.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id1">
+<h2>2. Install Sphinx<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Install Sphinx using <cite>pip</cite>. Run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx
+</pre></div>
+</div>
+</li>
+<li><p>To verify the installation, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p>You should see output similar to <cite>sphinx-build 7.x.x</cite>.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="set-up-a-sphinx-project">
+<h2>3. Set Up a Sphinx Project<a class="headerlink" href="#set-up-a-sphinx-project" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Navigate to the directory where you want to create your documentation and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
+</pre></div>
+</div>
+</li>
+<li><p>Follow the prompts to configure your project:
+- Project name
+- Author name
+- Language
+- Enable autodoc and other extensions if needed</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="install-additional-sphinx-extensions-optional">
+<h2>4. Install Additional Sphinx Extensions (Optional)<a class="headerlink" href="#install-additional-sphinx-extensions-optional" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Sphinx has various extensions to enhance its functionality. To install an extension, use <cite>pip</cite>. For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx_rtd_theme
+</pre></div>
+</div>
+</li>
+<li><p>Add the installed extension to the <cite>extensions</cite> list in your <cite>conf.py</cite> file. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="build-your-documentation">
+<h2>5. Build Your Documentation<a class="headerlink" href="#build-your-documentation" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>To generate the documentation, navigate to your project directory and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</li>
+<li><p>The generated HTML files will be available in the <cite>_build/html</cite> directory.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="preview-your-documentation">
+<h2>6. Preview Your Documentation<a class="headerlink" href="#preview-your-documentation" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Open the generated HTML files in your web browser. For example, to open the main page, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>_build/html/index.html
+</pre></div>
+</div>
+</li>
+<li><p>On Windows, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>start<span class="w"> </span>_build/html/index.html
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="customize-your-documentation">
+<h2>7. Customize Your Documentation<a class="headerlink" href="#customize-your-documentation" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Edit the <cite>.rst</cite> files in your project directory to update content and structure.</p></li>
+<li><p>Update the <cite>conf.py</cite> file to configure project settings like theme, extensions, and metadata.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="rebuild-your-documentation-after-changes">
+<h2>8. Rebuild Your Documentation After Changes<a class="headerlink" href="#rebuild-your-documentation-after-changes" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Each time you modify your <cite>.rst</cite> files or <cite>conf.py</cite>, rebuild the documentation by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</li>
+<li><p>Refresh your browser to see the updated documentation.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="troubleshooting-sphinx-issues">
+<h2>9. Troubleshooting Sphinx Issues<a class="headerlink" href="#troubleshooting-sphinx-issues" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>If you encounter issues, ensure that Sphinx and its extensions are up to date:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>sphinx
+</pre></div>
+</div>
+</li>
+<li><p>Clear the build directory and rebuild the documentation if needed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>clean
+make<span class="w"> </span>html
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="install-sphinx-in-a-virtual-environment-optional">
+<h2>10. Install Sphinx in a Virtual Environment (Optional)<a class="headerlink" href="#install-sphinx-in-a-virtual-environment-optional" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>To avoid conflicts with other Python projects, set up a virtual environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>sphinx_env
+</pre></div>
+</div>
+</li>
+<li><p>Activate the virtual environment:
+- On Windows:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx_env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</pre></div>
+</div>
+</div></blockquote>
+<ul>
+<li><p>On macOS/Linux:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>sphinx_env/bin/activate
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Install Sphinx in the virtual environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p>You now have Sphinx installed, configured, and ready for creating professional documentation.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../python/install_pip.html" class="btn btn-neutral float-left" title="Installing and Configuring pip" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install_readthedocs.html" class="btn btn-neutral float-right" title="Install Read the Docs Theme" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Oleh_Shynkarenko.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
