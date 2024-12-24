@@ -10,7 +10,6 @@ The Sphinx RTD theme has become a favorite for developers, writers, and teams wh
 
 In the sections ahead, you’ll find step-by-step guidance on setting up the Sphinx RTD theme, customizing it to suit your needs, and maximizing its features to create engaging and organized documentation. Let's begin!
 
-
 .. toctree::
    :hidden:
    :caption: Python and PIP
