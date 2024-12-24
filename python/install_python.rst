@@ -16,6 +16,7 @@ Follow this guide to install Python step by step on your system.
    - Locate the downloaded installer file on your system.
    - Double-click the installer to start the installation process.
    - Follow the on-screen instructions:
+   
      - On Windows, check the box **"Add Python to PATH"** before proceeding.
      - On macOS/Linux, ensure you have the necessary permissions to install software.
 
